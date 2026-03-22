@@ -1,0 +1,138 @@
+/* Activities Page — Unique Design */
+
+/* ===== Split Intro ===== */
+.introGrid {
+    display: grid;
+    grid-template-columns: 5fr 6fr;
+    gap: clamp(3rem, 4vw, 8rem);
+    align-items: start;
+}
+
+/* ===== Operation Blocks ===== */
+.opBlock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2.5rem, 5vw, 6rem);
+    align-items: center;
+    padding: var(--space-xl) 0;
+    border-bottom: 1px solid var(--color-gray-ultra);
+}
+
+.opBlock:last-child {
+    border-bottom: none;
+}
+
+.opBlockReversed {
+    direction: rtl;
+}
+
+.opBlockReversed>* {
+    direction: ltr;
+}
+
+.opImageWrap {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.opImageWrap img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    transition: transform var(--duration-slower) var(--ease-out);
+}
+
+.opBlock:hover .opImageWrap img {
+    transform: scale(1.04);
+}
+
+.opNum {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    font-family: var(--font-heading);
+    font-size: var(--text-4xl);
+    font-weight: 900;
+    color: var(--color-white);
+    opacity: 0.2;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    transition: all var(--duration-normal) var(--ease-out);
+}
+
+.opBlock:hover .opNum {
+    opacity: 0.5;
+    color: var(--color-gold);
+}
+
+.opTag {
+    font-family: var(--font-heading);
+    font-size: var(--text-xs);
+    font-weight: 800;
+    color: var(--color-gold);
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.opContent {
+    position: relative;
+}
+
+.opContent::before {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: transparent;
+    transition: background var(--duration-normal) var(--ease-out);
+}
+
+.opBlock:hover .opContent::before {
+    background: linear-gradient(to bottom, var(--color-gold), transparent);
+}
+
+/* ===== Bottom CTA ===== */
+.ctaSection {
+    background: linear-gradient(135deg, #1b3c2d 0%, #0f2219 100%);
+    padding: clamp(4rem, 6vw, 7rem) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ctaGrain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .introGrid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .opBlock {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .opBlockReversed {
+        direction: ltr;
+    }
+
+    .opImageWrap img {
+        height: 250px;
+    }
+
+    .opContent::before {
+        display: none;
+    }
+}
