@@ -4,54 +4,28 @@ import Link from "next/link";
 import styles from "./activities.module.css";
 
 export const metadata = {
-    title: "Activities — Bharath Agrovet Industries",
-    description: "From breeding and hatching to feed mills, processing, and retailing — our integrated poultry operations.",
+    title: "Activities — Happy Poultry",
+    description: "From contract farming and chicken processing to Halal retail — Happy Poultry's three pillars of excellence in Kasaragod.",
 };
-
-const BASE = "https://www.bharathagrovet.com";
 
 const operations = [
     {
         num: "01",
-        title: "Breeders",
-        desc: "Our own breeding farm at Hassan district produces 5 million hatching eggs per annum, maintaining 50,000 breeders under strict bio-security practices. Equipped with the latest gadgets and backed by qualified technical staff.",
-        img: "/images/operations/Breeders.jpg",
-    },
-    {
-        num: "02",
-        title: "Hatcheries",
-        desc: "Two own hatcheries at Mangalore and Kundapura with an annual capacity of 14 million chicks. Functioning round the clock under trained staff, achieving 82–85% average hatchability.",
-        img: "/images/operations/Hatcheries.webp",
-    },
-    {
-        num: "03",
-        title: "Feed Mills",
-        desc: "State-of-the-art crumbs & pellet mill at Thumbe producing 6,000+ tons monthly. Using computerized feed formulations and top-grade raw materials for industry-leading feed quality.",
-        img: "/images/operations/Feed Mills.jpg",
-    },
-    {
-        num: "04",
-        title: "Farming",
-        desc: "400+ contract farmers producing healthy broilers across coastal Karnataka. A skilled, dedicated team manages day-to-day activities — data recording, health coverage, and marketing — creating rural employment.",
+        title: "Farms",
+        desc: "We have tied up with more than 100 farmers to produce broilers on a contractual basis. This has opened up employment opportunities in rural areas and helped them achieve economic stability. Our team of trained managers and supervisors work with farmers to produce healthy poultry — sold live and processed according to market requirements.",
         img: "/images/operations/Farming.jpg",
     },
     {
-        num: "05",
-        title: "Processing",
-        desc: "Conveyorised dressing unit at Ganjimutt processes 1,000 birds per hour. Equipped with rendering plant, ETP, bio gas plant (400 units/day), and cold storage for Halal certified chilled chicken.",
+        num: "02",
+        title: "Chicken Processing Unit",
+        desc: "We have installed a conveyorised dressing unit at Badiadka, at the outskirts of Kasaragod, in a spacious location with an hourly dressing capacity of 500 birds. The unit ensures hygienic, Halal-certified processing that meets the highest standards for institutional and retail supply.",
         img: "/images/operations/Processing.jpg",
     },
     {
-        num: "06",
+        num: "03",
         title: "Retailing",
-        desc: "Five retail outlets across Mangalore — three 'Chilly Chicken' and two 'Meat Junction' outlets — delivering Halal chilled chicken to restaurants, caterers, and direct customers.",
+        desc: "We have established 3 retail outlets in and around Kasaragod. Our Halal chilled chicken has been well received by renowned restaurants, institutions, and the general public — which has encouraged us to reach more customers and expand our presence in the region.",
         img: "/images/operations/Retailing.jpg",
-    },
-    {
-        num: "07",
-        title: "Consultancy",
-        desc: "Qualified consultants guide upcoming entrepreneurs and existing poultry farmers. We have set up and commissioned hatcheries, feed mills, and turn-key poultry projects in India and abroad.",
-        img: `${BASE}/images/banner_images/20.jpg`,
     },
 ];
 
@@ -59,7 +33,7 @@ export default function ActivitiesPage() {
     return (
         <>
             <HeroBanner
-                imageSrc={`${BASE}/images/banner_images/10.jpg`}
+                imageSrc="/images/operations/Farming.jpg"
                 title="Our Activities"
                 subtitle="Operations"
                 compact
@@ -71,9 +45,9 @@ export default function ActivitiesPage() {
                     <div className={styles.introGrid}>
                         <AnimateOnScroll>
                             <div>
-                                <span className="overline">Integrated Value Chain</span>
+                                <span className="overline">Our Value Chain</span>
                                 <h2 className="heading-2">
-                                    7 Pillars of Excellence
+                                    3 Pillars of Excellence
                                 </h2>
                                 <div className="accent-bar" />
                             </div>
@@ -81,12 +55,13 @@ export default function ActivitiesPage() {
                         <AnimateOnScroll delay={2}>
                             <div>
                                 <p className="text-large" style={{ color: "var(--color-gray)", marginBottom: "1.5rem" }}>
-                                    From breeding and hatching through feed production, farming, processing, and
-                                    retail — every step is managed with precision and care.
+                                    From contract farming through Halal processing to retail
+                                    outlets — every step is managed with care and precision.
                                 </p>
                                 <p style={{ color: "var(--color-gray)", marginBottom: "2.5rem" }}>
-                                    Our vertically integrated model ensures quality control at every stage,
-                                    from the farm to the consumer&apos;s table.
+                                    Our integrated approach ensures quality control at every
+                                    stage, bringing fresh, nutritious chicken from the farm
+                                    directly to our customers&apos; tables.
                                 </p>
                                 <Link href="/products" className="btn btn--primary">
                                     View Products →
@@ -135,7 +110,7 @@ export default function ActivitiesPage() {
                             Explore Our Product Range
                         </h2>
                         <p style={{ color: "rgba(255,255,255,0.7)", maxWidth: 550, margin: "0 auto 2rem", lineHeight: 1.8 }}>
-                            From hatching eggs and day-old chicks to premium poultry feeds and fresh chilled chicken.
+                            From broiler chicks and poultry feeds to fresh Halal chilled chicken and live birds.
                         </p>
                         <Link href="/products" className="btn btn--gold">
                             View Products →

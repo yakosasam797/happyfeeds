@@ -3,11 +3,11 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata = {
-  title: "Bharath Agrovet Industries — Leading Poultry Producer in Karnataka",
+  title: "Happy Poultry — Fresh Halal Chicken | Badiadka, Kasaragod",
   description:
-    "Established in 2005, Bharath Agrovet Industries is a leading poultry producing company in Mangaluru, committed to quality and service with integrated breeding, hatching, feed milling, and processing operations.",
+    "Happy Poultry is a family-owned poultry group based in Badiadka, Kasaragod, Kerala. With over 20 years in the chicken business, we deliver fresh Halal chilled chicken, live birds, and quality poultry products.",
   keywords:
-    "Bharath Agrovet, poultry, broiler, hatchery, feed mill, chicken, Mangalore, Karnataka",
+    "Happy Poultry, halal chicken, broiler, live birds, poultry feeds, Badiadka, Kasaragod, Kerala, fresh chicken",
 };
 
 export default function RootLayout({ children }) {

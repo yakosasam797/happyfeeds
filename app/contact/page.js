@@ -12,7 +12,7 @@ export default function ContactPage() {
                     <div className={styles.heroGrid}>
                         {/* Left — Image Card with text overlay */}
                         <div className={styles.imageCard}>
-                            <img src="/images/operations/Feed Mills.jpg" alt="Bharath Agrovet" />
+                            <img src="/images/operations/Retailing.jpg" alt="Happy Poultry" />
                             <div className={styles.imageCardOverlay}>
                                 <span className={styles.heroTag}>Contact Us</span>
                                 <h1 className={styles.heroTitle}>
@@ -20,18 +20,18 @@ export default function ContactPage() {
                                     <span className={styles.heroTitleAccent}>in touch</span>
                                 </h1>
                                 <p className={styles.heroDesc}>
-                                    Whether you need product enquiries, partnership
-                                    opportunities, or consultancy — our experts are
-                                    ready to support you.
+                                    Whether you need product enquiries, want to become
+                                    a contract farmer, or have any questions about our
+                                    products — our team is ready to help.
                                 </p>
                                 <div className={styles.contactInfoRow}>
                                     <div className={styles.contactInfoItem}>
                                         <span className={styles.contactInfoDot} />
-                                        <a href="tel:+918242443498">+91 824-2443498</a>
+                                        <a href="tel:+919846241851">+91 9846241851</a>
                                     </div>
                                     <div className={styles.contactInfoItem}>
                                         <span className={styles.contactInfoDot} />
-                                        <a href="mailto:bharathpf@gmail.com">bharathpf@gmail.com</a>
+                                        <a href="mailto:info@happypoultry.co.in">info@happypoultry.co.in</a>
                                     </div>
                                 </div>
                             </div>
@@ -103,28 +103,29 @@ export default function ContactPage() {
                         <div className={styles.mapGrid}>
                             <div className={styles.mapWrap}>
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.04!2d74.8420!3d12.8980!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a43d0c1e2f3%3A0x1234567890abcdef!2sMannagudda%2C%20Mangaluru%2C%20Karnataka%20575003!5e0!3m2!1sen!2sin!4v1234567890"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.12!2d75.0330!3d12.4190!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba4a43c0f4b0e43%3A0x6a0ad4c1e3f2b5d0!2sBadiadka%2C%20Kasaragod%2C%20Kerala%20671551!5e0!3m2!1sen!2sin!4v1234567890"
                                     loading="lazy"
-                                    title="Bharath Agrovet Industries Location"
+                                    title="Happy Poultry Location"
                                 />
                             </div>
 
                             <div className={styles.mapContent}>
                                 <h3 className="heading-4" style={{ marginBottom: "0.5rem" }}>
-                                    Bharath Agrovet Industries
+                                    Happy Poultry
                                 </h3>
                                 <p className="text-muted" style={{ marginBottom: "var(--space-md)" }}>
-                                    Three decades of excellence in integrated poultry production across coastal Karnataka.
+                                    Family-owned poultry group serving Kasaragod for over 20 years.
                                 </p>
 
                                 <div className={styles.addressBlock}>
                                     <div className={styles.addressItem}>
                                         <div className={styles.addressIcon}>📍</div>
                                         <div>
-                                            <div className={styles.addressLabel}>Head Office</div>
+                                            <div className={styles.addressLabel}>Address</div>
                                             <div className={styles.addressText}>
-                                                Mannagudda, Mangaluru 575003<br />
-                                                Karnataka, India
+                                                BGP XII 628, Parekkar Complex<br />
+                                                Badiadka, Kasaragod – 671 551<br />
+                                                Kerala, India
                                             </div>
                                         </div>
                                     </div>
@@ -133,7 +134,7 @@ export default function ContactPage() {
                                         <div>
                                             <div className={styles.addressLabel}>Phone</div>
                                             <div className={styles.addressText}>
-                                                <a href="tel:+918242443498">+91 824-2443498</a> / <a href="tel:+918242443499">2443499</a>
+                                                <a href="tel:+919846241851">+91 9846241851</a>
                                             </div>
                                         </div>
                                     </div>
@@ -142,8 +143,7 @@ export default function ContactPage() {
                                         <div>
                                             <div className={styles.addressLabel}>Email</div>
                                             <div className={styles.addressText}>
-                                                <a href="mailto:bharathpf@gmail.com">bharathpf@gmail.com</a><br />
-                                                <a href="mailto:info@bharathagrovet.com">info@bharathagrovet.com</a>
+                                                <a href="mailto:info@happypoultry.co.in">info@happypoultry.co.in</a>
                                             </div>
                                         </div>
                                     </div>

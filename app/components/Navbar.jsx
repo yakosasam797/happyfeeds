@@ -9,7 +9,6 @@ const navLinks = [
     { href: "/about", label: "About" },
     { href: "/activities", label: "Activities" },
     { href: "/products", label: "Products" },
-    { href: "/indous-bio", label: "Indous Bio" },
     { href: "/gallery", label: "Gallery" },
     { href: "/contact", label: "Contact" },
 ];
@@ -74,8 +73,8 @@ export default function Navbar() {
             <div className={styles.inner}>
                 <Link href="/" className={styles.logo}>
                     <img
-                        src="https://www.bharathagrovet.com/images/logo.jpg"
-                        alt="Bharath Agrovet Logo"
+                        src="https://happypoultry.co.in/images/logo.png"
+                        alt="Happy Poultry Logo"
                         className={styles.logoImage}
                     />
                 </Link>

@@ -13,11 +13,8 @@ export default function Footer() {
                     <div className={styles.column}>
                         <h4 className={styles.colHeading}>Operations</h4>
                         <ul className={styles.linkList}>
-                            <li><Link href="/activities">Breeders</Link></li>
-                            <li><Link href="/activities">Hatchery</Link></li>
-                            <li><Link href="/activities">Broiler Farms</Link></li>
-                            <li><Link href="/activities">Feed Mill</Link></li>
-                            <li><Link href="/activities">Processing</Link></li>
+                            <li><Link href="/activities">Farms</Link></li>
+                            <li><Link href="/activities">Chicken Processing Unit</Link></li>
                             <li><Link href="/activities">Retailing</Link></li>
                         </ul>
                     </div>
@@ -26,12 +23,12 @@ export default function Footer() {
                     <div className={styles.column}>
                         <h4 className={styles.colHeading}>Products</h4>
                         <ul className={styles.linkList}>
-                            <li><Link href="/products">Broiler Hatching Eggs</Link></li>
-                            <li><Link href="/products">Day Old Chicks</Link></li>
-                            <li><Link href="/products">Broiler Birds</Link></li>
-                            <li><Link href="/products">Chilled Chicken</Link></li>
-                            <li><Link href="/products">Poultry Feed</Link></li>
-                            <li><Link href="/products">Parent Culls</Link></li>
+                            <li><Link href="/products">Broiler Chicks</Link></li>
+                            <li><Link href="/products">Poultry Feeds</Link></li>
+                            <li><Link href="/products">Poultry Supplements</Link></li>
+                            <li><Link href="/products">Live Birds</Link></li>
+                            <li><Link href="/products">Fresh Chilled Chicken</Link></li>
+                            <li><Link href="/products">Processed / Dressed Chicken</Link></li>
                         </ul>
                     </div>
 
@@ -42,8 +39,7 @@ export default function Footer() {
                             <li><Link href="/about">About Us</Link></li>
                             <li><Link href="/activities">Our Activities</Link></li>
                             <li><Link href="/gallery">Gallery</Link></li>
-                            <li><Link href="/indous-bio">Indous Bio</Link></li>
-                            <li><a href="https://www.bharathagrovet.com" target="_blank" rel="noopener noreferrer">Main Website</a></li>
+                            <li><Link href="/contact">Contact Us</Link></li>
                         </ul>
                     </div>
 
@@ -51,10 +47,11 @@ export default function Footer() {
                     <div className={styles.column}>
                         <h4 className={styles.colHeading}>Contact</h4>
                         <ul className={styles.linkList}>
-                            <li><span>Thumbe, Mangaluru – 574143</span></li>
-                            <li><span>Dakshina Kannada, Karnataka</span></li>
-                            <li><a href="mailto:info@bharathagrovet.com">info@bharathagrovet.com</a></li>
-                            <li><a href="https://www.bharathagrovet.com" target="_blank" rel="noopener noreferrer">www.bharathagrovet.com</a></li>
+                            <li><span>BGP XII 628, Parekkar Complex</span></li>
+                            <li><span>Badiadka, Kasaragod – 671 551</span></li>
+                            <li><a href="tel:+919846241851">+91 9846241851</a></li>
+                            <li><a href="mailto:info@happypoultry.co.in">info@happypoultry.co.in</a></li>
+                            <li><a href="https://www.happypoultry.co.in" target="_blank" rel="noopener noreferrer">www.happypoultry.co.in</a></li>
                         </ul>
 
                         <Link href="/contact" className={styles.ctaBtn}>
@@ -68,17 +65,17 @@ export default function Footer() {
 
                 <div className={styles.bottomBar}>
                     <img
-                        src="https://www.bharathagrovet.com/images/logo.jpg"
-                        alt="Bharath Agrovet Logo"
+                        src="https://happypoultry.co.in/images/logo.png"
+                        alt="Happy Poultry Logo"
                         className={styles.bottomLogo}
                     />
 
                     <div className={styles.bottomRight}>
                         <p className={styles.copyright}>
-                            © {CURRENT_YEAR} Bharath Agrovet Industries Pvt. Ltd.
+                            © {CURRENT_YEAR} Happy Poultry. All rights reserved.
                         </p>
                         <span className={styles.bottomDot}>·</span>
-                        <span className={styles.legalLink}>All rights reserved</span>
+                        <span className={styles.legalLink}>Badiadka, Kasaragod, Kerala</span>
                     </div>
                 </div>
             </div>

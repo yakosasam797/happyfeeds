@@ -1,5 +1,5 @@
 /* ========================================
-   BHARATH AGROVET — PREMIUM EDITORIAL DESIGN SYSTEM
+   HAPPY POULTRY — PREMIUM EDITORIAL DESIGN SYSTEM
    ======================================== */
 
 /* --- Google Fonts --- */
@@ -13,10 +13,10 @@
   --color-bg-cream: #F7F3ED;
   --color-dark: #1A1A1A;
   --color-dark-soft: #2A2A2A;
-  --color-green: #1B3C2D;
-  --color-green-light: #2A5A42;
-  --color-green-muted: #3D7A5E;
-  --color-green-pale: #E8F0EC;
+  --color-green: #D32F2F;
+  --color-green-light: #B71C1C;
+  --color-green-muted: #EF5350;
+  --color-green-pale: #FFEBEE;
   --color-gold: #C8A96E;
   --color-gold-light: #D4BC8A;
   --color-gold-pale: #F5EDDE;
@@ -24,10 +24,10 @@
   --color-gray-light: #A3A3A3;
   --color-gray-ultra: #E5E3DE;
   --color-white: #FFFFFF;
-  --color-overlay: rgba(27, 60, 45, 0.55);
+  --color-overlay: rgba(211, 47, 47, 0.55);
   --color-overlay-dark: rgba(0, 0, 0, 0.45);
-  --color-cta: #5FAD56;
-  --color-cta-dark: #4A9143;
+  --color-cta: #D32F2F;
+  --color-cta-dark: #B71C1C;
 
   /* Typography */
   --font-heading: 'Inter', -apple-system, sans-serif;
@@ -134,6 +134,7 @@ h6 {
   background: var(--color-gold-pale);
   color: var(--color-green);
 }
+
 
 /* --- Layout Utilities --- */
 .container {
@@ -329,7 +330,7 @@ h6 {
 
 .btn--primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(27, 60, 45, 0.3);
+  box-shadow: 0 12px 40px rgba(211, 47, 47, 0.3);
 }
 
 .btn--outline {
@@ -342,7 +343,7 @@ h6 {
   background: var(--color-green);
   color: var(--color-white);
   transform: translateY(-3px);
-  box-shadow: inset 0 0 0 2px var(--color-green), 0 12px 40px rgba(27, 60, 45, 0.2);
+  box-shadow: inset 0 0 0 2px var(--color-green), 0 12px 40px rgba(211, 47, 47, 0.2);
 }
 
 .btn--gold {

@@ -5,102 +5,72 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import { useState, useEffect, useCallback, useRef } from "react";
 
-const BASE = "https://www.bharathagrovet.com";
+const BASE = "https://happypoultry.co.in";
 
 /* ── Hero slides ── */
 const heroSlides = [
   {
-    img: `${BASE}/images/banner_images/1.jpg`,
-    title: "Committed to Quality\n& Service in Poultry",
-    sub: "Since 2005 — Mangaluru, India",
+    img: `${BASE}/images/slider/1.jpg`,
+    title: "Poultry Performance\n& Productivity",
+    sub: "Since 2000 — Badiadka, Kasaragod",
   },
   {
-    img: `${BASE}/images/banner_images/7.jpg`,
-    title: "Integrated Poultry\nValue Chain",
-    sub: "Breeding • Hatching • Feed • Processing • Retail",
+    img: "/images/operations/Farming.jpg",
+    title: "We Farm Chickens\nEthically & Profitably",
+    sub: "100+ Contract Farmers • Rural Employment",
   },
   {
-    img: `${BASE}/images/banner_images/9.jpg`,
-    title: "Sustainable Farming\nfor Coastal Karnataka",
-    sub: "400+ Contract Farmers • Rural Employment",
-  },
-  {
-    img: `${BASE}/images/banner_images/17.jpg`,
-    title: "Premium Poultry\nProducts",
-    sub: "From Farm to Fork — With Love",
-  },
-  {
-    img: `${BASE}/images/banner_images/20.jpg`,
-    title: "Three Decades of\nExcellence",
-    sub: "Technical & Marketing Expertise",
+    img: "/images/products/Fresh Chilled Chicken.jpg",
+    title: "Premium Halal\nChilled Chicken",
+    sub: "From Farm to Fork — With Care",
   },
 ];
 
-/* ── Activities with good stock photos ── */
+/* ── Activities ── */
 const activities = [
   {
-    title: "Breeders",
-    desc: "5 million+ hatching eggs per annum from our breeding farm at Hassan District with strict bio-security practices.",
-    img: "/images/operations/Breeders.jpg",
+    title: "Farms",
+    desc: "We have tied up with more than 100 farmers to produce broilers on a contractual basis, creating employment and economic stability in rural areas.",
+    img: "/images/operations/Farming.jpg",
     num: "01",
   },
   {
-    title: "Hatcheries",
-    desc: "14 million+ chicks per annum from 2 own hatcheries at Mangalore and Kundapura, functioning round the clock.",
-    img: "/images/operations/Hatcheries.webp",
+    title: "Chicken Processing Unit",
+    desc: "Conveyorised dressing unit at Badiadka processing 500 birds per hour — delivering fresh, hygienic Halal chilled chicken to our customers.",
+    img: "/images/operations/Processing.jpg",
     num: "02",
   },
   {
-    title: "Feed Mills",
-    desc: "State-of-the-art crumbs & pellet mill at Thumbe with 6,000+ tons monthly production capacity.",
-    img: "/images/operations/Feed Mills.jpg",
-    num: "03",
-  },
-  {
-    title: "Farming",
-    desc: "400+ contract farmers producing healthy broilers, creating rural employment and economic sustainability.",
-    img: "/images/operations/Farming.jpg",
-    num: "04",
-  },
-  {
-    title: "Processing",
-    desc: "Conveyorised dressing unit at Ganjimutt dressing 1,000 birds per hour, with ETP & bio gas plants.",
-    img: "/images/operations/Processing.jpg",
-    num: "05",
-  },
-  {
     title: "Retailing",
-    desc: "Five retail outlets across Mangalore delivering Halal chilled chicken to restaurants and the public.",
+    desc: "3 retail outlets in and around Kasaragod. Our Halal chilled chicken is well received by restaurants, institutions, and the general public.",
     img: "/images/operations/Retailing.jpg",
-    num: "06",
+    num: "03",
   },
 ];
 
-/* ── Stats with descriptions ── */
+/* ── Stats ── */
 const stats = [
-  { number: "50 Lakh+", label: "Hatching Eggs", desc: "Annually from our breeding farm at Hassan District with strict bio-security." },
-  { number: "1.4 Crore+", label: "Chicks Per Year", desc: "From 2 own hatcheries at Mangalore and Kundapura, round the clock." },
-  { number: "400+", label: "Partner Farmers", desc: "Producing healthy broilers, creating rural employment across the region." },
-  { number: "6,000+", label: "Tons Feed Monthly", desc: "State-of-the-art crumbs & pellet mill at Thumbe with top-grade materials." },
+  { number: "20+", label: "Years Experience", desc: "Over two decades of chicken business with a trusted reputation in the market." },
+  { number: "100+", label: "Partner Farmers", desc: "Contract broiler farmers creating rural employment and economic sustainability." },
+  { number: "500", label: "Birds/Hour Processing", desc: "Conveyorised dressing unit at Badiadka for hygienic, efficient processing." },
+  { number: "3", label: "Retail Outlets", desc: "Halal chilled chicken outlets serving Kasaragod's restaurants and public." },
 ];
 
 /* ── Products ── */
 const products = [
-  { name: "Broiler Hatching Eggs", detail: "Premium fertile eggs from our own breeding farm with strict bio-security", img: "/images/products/Broiler Hatching Eggs.jpg" },
-  { name: "Day Old Chicks", detail: "1.4 Crore+ DOC annually from 2 hatcheries at Mangalore and Kundapura", img: "/images/products/Day Old Chicks.jpg" },
-  { name: "Hi-Density Poultry Feeds", detail: "Computerized formulation using the best raw materials available", img: "/images/products/Hi-Density Poultry Feeds.jpg" },
-  { name: "Broiler Feed Pre-Mixes", detail: "Optimized growth rates with superior feed conversion ratios", img: "/images/products/Broiler Feed Pre-Mixes.jpeg" },
-  { name: "Breeder Feed Pre-Mixes", detail: "Balanced nutrients specifically designed for breeder flocks", img: "/images/products/Breeder Feed Pre-Mixes.jpg" },
-  { name: "Live Chicken", detail: "Healthy broilers raised by 400+ contract farmers across the region", img: "/images/products/Live Chicken.jpg" },
-  { name: "Fresh Chilled Chicken", detail: "Halal-certified, conveyorised processing at our Ganjimutt plant", img: "/images/products/Fresh Chilled Chicken.jpg" },
-  { name: "Parent Culls", detail: "Quality parent culls sourced from integrated operations", img: "/images/products/Parent Culls.jpg" },
+  { name: "Broiler Chicks", detail: "Healthy chicks marketed through our nearby region — contact our marketing team to buy", img: "/images/products/Day Old Chicks.jpg" },
+  { name: "Poultry Feeds", detail: "Rich nutritious feeds with best quality ingredients for desired weight and better FCR", img: "/images/products/Hi-Density Poultry Feeds.jpg" },
+  { name: "Poultry Supplements", detail: "All kinds of poultry supplements available for optimum bird health and performance", img: "/images/products/Broiler Feed Pre-Mixes.jpeg" },
+  { name: "Live Birds", detail: "Healthy live birds marketed through our Kasaragod facility — contact marketing team", img: "/images/products/Live Chicken.jpg" },
+  { name: "Fresh Chilled Chicken", detail: "Halal certified fresh chilled and frozen chicken for institutional supply and retail", img: "/images/products/Fresh Chilled Chicken.jpg" },
+  { name: "Processed / Dressed Chicken", detail: "Fresh dressed chicken supplied through our outlets and institutional partners", img: "/images/products/Parent Culls.jpg" },
 ];
 
 const gallery = [
-  `${BASE}/gallery_images/1880378147A1-900_600.jpg`,
-  `${BASE}/gallery_images/2089296197A2.jpg`,
-  `${BASE}/gallery_images/303128077A3.jpg`,
-  `${BASE}/gallery_images/951331741A4.jpg`,
+  "/images/products/Live Chicken.jpg",
+  "/images/products/Fresh Chilled Chicken.jpg",
+  "/images/operations/Farming.jpg",
+  "/images/operations/Processing.jpg",
 ];
 
 export default function HomePage() {
@@ -179,7 +149,7 @@ export default function HomePage() {
               Discover Our Story
             </Link>
             <Link href="/contact" className="btn btn--gold">
-              Partner With Us →
+              Get in Touch →
             </Link>
           </div>
         </div>
@@ -208,19 +178,17 @@ export default function HomePage() {
         <div className={styles.marquee}>
           {[...Array(3)].map((_, k) => (
             <div className={styles.marqueeInner} key={k}>
-              <span>Breeding</span>
-              <span className={styles.marqueeDot}>◆</span>
-              <span>Hatching</span>
-              <span className={styles.marqueeDot}>◆</span>
-              <span>Feed Mills</span>
-              <span className={styles.marqueeDot}>◆</span>
-              <span>Farming</span>
+              <span>Farms</span>
               <span className={styles.marqueeDot}>◆</span>
               <span>Processing</span>
               <span className={styles.marqueeDot}>◆</span>
               <span>Retailing</span>
               <span className={styles.marqueeDot}>◆</span>
-              <span>Consultancy</span>
+              <span>Live Chicken</span>
+              <span className={styles.marqueeDot}>◆</span>
+              <span>Halal Chilled Chicken</span>
+              <span className={styles.marqueeDot}>◆</span>
+              <span>Poultry Feeds</span>
               <span className={styles.marqueeDot}>◆</span>
             </div>
           ))}
@@ -235,7 +203,7 @@ export default function HomePage() {
               <div className={styles.aboutLeft}>
                 <span className="overline">Who We Are</span>
                 <h2 className="heading-2">
-                  A leading poultry producing company in coastal Karnataka
+                  A fast-growing family-owned poultry group in Kasaragod, Kerala
                 </h2>
                 <div className="accent-bar" />
               </div>
@@ -243,16 +211,16 @@ export default function HomePage() {
             <AnimateOnScroll delay={2}>
               <div className={styles.aboutRight}>
                 <p className="text-large" style={{ color: "var(--color-gray)", marginBottom: "1.5rem" }}>
-                  Established in 2005 by marketing and veterinary professionals
-                  with a vision to promote and provide superior poultry products
-                  and services. Bharath Agrovet Industries today has contributed
-                  significantly to the overall growth of poultry industry in
-                  coastal districts of Karnataka and Kerala.
+                  Happy Poultry is a family-owned partnership concern based in
+                  Badiadka, Kasaragod, Kerala. We have been engaged in the
+                  chicken business for over twenty years and enjoy a trusted
+                  reputation as providers of quality chicken with good scientific
+                  management practices.
                 </p>
                 <p style={{ color: "var(--color-gray)", marginBottom: "2.5rem" }}>
-                  With more than 3 decades of technical and marketing experience,
-                  we operate an integrated poultry value chain — from breeding
-                  and hatching to feed production, processing, and retail.
+                  With consistent and continuous improvement, we operate an
+                  integrated chicken value chain — from contract farming and
+                  processing to Halal retail — serving customers across Kasaragod.
                 </p>
                 <Link href="/about" className="btn btn--primary">
                   Learn More About Us →
@@ -265,14 +233,13 @@ export default function HomePage() {
 
       {/* ===== FULL BLEED IMAGE BREAK ===== */}
       <div className={styles.fullBleedBreak}>
-        <img src={`${BASE}/images/banner_images/7.jpg`} alt="Bharath Agrovet operations" />
+        <img src="/images/operations/Farming.jpg" alt="Happy Poultry contract farms" />
         <div className={styles.fullBleedOverlay}>
           <AnimateOnScroll>
             <blockquote className={styles.pullQuote}>
               <span className={styles.quoteIcon}>&ldquo;</span>
-              We aspire to be the foremost poultry producer celebrated for our
-              commitment to delivering wholesome and affordable protein options
-              to society.
+              We are committed to producing &amp; marketing nutritious chicken at
+              low cost to customers who look for consistent quality.
             </blockquote>
           </AnimateOnScroll>
         </div>
@@ -286,7 +253,7 @@ export default function HomePage() {
               <span className="overline" style={{ justifyContent: "center" }}>What We Do</span>
               <h2 className="heading-2">Our Operations</h2>
               <p className="text-muted" style={{ marginTop: "1rem", maxWidth: "550px", marginLeft: "auto", marginRight: "auto" }}>
-                A vertically integrated poultry value chain — from farm to fork.
+                From contract farming to Halal processing and retail — a complete poultry value chain.
               </p>
             </div>
           </AnimateOnScroll>
@@ -366,7 +333,7 @@ export default function HomePage() {
               <AnimateOnScroll>
                 <h2 className={styles.statsHeading}>Our numbers speak for themselves.</h2>
                 <p className={styles.statsSubtext}>
-                  Three decades of integrated poultry operations across coastal Karnataka & Kerala.
+                  Two decades of quality poultry operations across Kasaragod, Kerala.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -393,9 +360,14 @@ export default function HomePage() {
 
       {/* ===== IMAGE STRIP ===== */}
       <div className={styles.imageStrip}>
-        {[2, 4, 9, 15].map((n) => (
+        {[
+          "/images/products/Live Chicken.jpg",
+          "/images/operations/Processing.jpg",
+          "/images/products/Hi-Density Poultry Feeds.jpg",
+          "/images/products/Fresh Chilled Chicken.jpg",
+        ].map((src, n) => (
           <div className={styles.stripItem} key={n}>
-            <img src={`${BASE}/images/banner_images/${n}.jpg`} alt={`Operations ${n}`} />
+            <img src={src} alt={`Happy Poultry operations ${n + 1}`} />
           </div>
         ))}
       </div>
@@ -406,11 +378,10 @@ export default function HomePage() {
           <AnimateOnScroll>
             <div className={styles.productsHeader}>
               <span className="overline" style={{ justifyContent: "center" }}>Our Products</span>
-              <h2 className="heading-2">Premium Poultry Products</h2>
+              <h2 className="heading-2">Quality Poultry Products</h2>
               <p className="text-muted" style={{ marginTop: "1rem", maxWidth: "600px", marginLeft: "auto", marginRight: "auto" }}>
-                From hatching eggs and day-old chicks to Hi-Density feeds and
-                fresh chilled Halal chicken — we deliver excellence across the
-                entire poultry value chain.
+                From broiler chicks and poultry feeds to live birds and fresh
+                Halal chilled chicken — we deliver quality at every stage.
               </p>
             </div>
           </AnimateOnScroll>
@@ -461,7 +432,7 @@ export default function HomePage() {
             {gallery.map((src, i) => (
               <AnimateOnScroll key={i} delay={i + 1}>
                 <div className={styles.galleryItem}>
-                  <img src={src} alt={`Gallery ${i + 1}`} />
+                  <img src={src} alt={`Happy Poultry gallery ${i + 1}`} />
                 </div>
               </AnimateOnScroll>
             ))}
@@ -471,7 +442,7 @@ export default function HomePage() {
 
       {/* ===== CTA BANNER ===== */}
       <section className={styles.ctaBanner}>
-        <img src={`${BASE}/images/banner_images/17.jpg`} alt="Partner" className={styles.ctaBg} />
+        <img src="/images/operations/Retailing.jpg" alt="Happy Poultry Retail" className={styles.ctaBg} />
         <div className={styles.ctaOverlay} />
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <AnimateOnScroll>
@@ -479,8 +450,8 @@ export default function HomePage() {
               <span className="overline" style={{ justifyContent: "center" }}>Get Started</span>
               <h2 className="heading-1 text-white">Partner With Us</h2>
               <p className={styles.ctaText}>
-                Whether you&apos;re a farmer seeking contract farming or a business
-                needing premium poultry products, we&apos;d love to connect.
+                Whether you&apos;re a farmer seeking contract farming or a customer
+                needing premium Halal chicken, we&apos;d love to connect.
               </p>
               <div className={styles.ctaButtons}>
                 <Link href="/contact" className="btn btn--gold">Get in Touch →</Link>

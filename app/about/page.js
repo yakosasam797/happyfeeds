@@ -3,42 +3,38 @@ import AnimateOnScroll from "../components/AnimateOnScroll";
 import styles from "./about.module.css";
 
 export const metadata = {
-    title: "About Us — Bharath Agrovet Industries",
-    description: "Leading poultry producing company in Mangaluru with over 3 decades of experience.",
+    title: "About Us — Happy Poultry",
+    description: "Happy Poultry is a family-owned poultry partnership in Badiadka, Kasaragod with over 20 years of experience delivering quality Halal chicken.",
 };
 
-const BASE = "https://www.bharathagrovet.com";
-
 const stats = [
-    { number: "50 Lakh+", label: "Hatching Eggs", desc: "Annually from our breeding farm at Hassan District." },
-    { number: "1.4 Crore+", label: "Chicks Per Year", desc: "From 2 own hatcheries, round the clock." },
-    { number: "400+", label: "Partner Farmers", desc: "Creating rural employment across the region." },
-    { number: "6,000+", label: "Tons Feed Monthly", desc: "State-of-the-art crumbs & pellet mill at Thumbe." },
+    { number: "20+", label: "Years Experience", desc: "Two decades of trusted chicken business in Kasaragod, Kerala." },
+    { number: "100+", label: "Partner Farmers", desc: "Contract farmers producing healthy broilers, creating rural employment." },
+    { number: "3", label: "Retail Outlets", desc: "Halal chilled chicken outlets in and around Kasaragod." },
+    { number: "500", label: "Birds/Hour", desc: "Conveyorised dressing unit at Badiadka for hygienic processing." },
 ];
 
 const timeline = [
-    { year: "1990s", title: "The Foundation", desc: "Our founders began their careers in the poultry industry, accumulating over 3 decades of technical and marketing expertise across coastal Karnataka." },
-    { year: "2005", title: "Bharath Agrovet is Born", desc: "Established in Mangaluru by marketing and veterinary professionals with a vision to promote superior poultry products and services." },
-    { year: "2008", title: "Hatchery Expansion", desc: "Expanded to 2 hatcheries at Mangalore and Kundapura with 14 million chick capacity, functioning round the clock." },
-    { year: "2012", title: "Feed Mill Launch", desc: "Commissioned state-of-the-art crumbs & pellet mill at Thumbe with 6,000+ tons monthly production capacity." },
-    { year: "2016", title: "Processing & Retail", desc: "Launched conveyorised dressing unit at Ganjimutt and opened retail outlets — Chilly Chicken and Meat Junction." },
-    { year: "2020", title: "Indous Bio", desc: "Launched Indous Bio — a sister concern producing premium virgin coconut oil from coastal Karnataka coconuts." },
-    { year: "Today", title: "Integrated Value Chain", desc: "A fully integrated poultry operation — breeding, hatching, feed, farming, processing, and retail — serving coastal Karnataka and Kerala." },
+    { year: "2000s", title: "The Foundation", desc: "Happy Poultry was established as a family-owned partnership concern in Badiadka, Kasaragod, Kerala — beginning its journey in the chicken business." },
+    { year: "Growth", title: "100+ Farmers", desc: "Tied up with more than 100 farmers to produce broilers on a contractual basis, opening employment opportunities in rural areas." },
+    { year: "Processing", title: "Chicken Processing Unit", desc: "Installed a conveyorised dressing unit at Badiadka with a capacity of 500 birds per hour, ensuring hygienic Halal-certified processing." },
+    { year: "Retail", title: "Retail Expansion", desc: "Established 3 retail outlets in and around Kasaragod, with Halal chilled chicken well received by restaurants, institutions, and the public." },
+    { year: "Today", title: "Committed to Quality", desc: "Continuing to serve Kasaragod with quality chicken, scientific management practices, and consistent improvement across the value chain." },
 ];
 
 const policyItems = [
-    "Technical upgradation of our sales staff",
     "Educate and implement excellent poultry production practices",
-    "Promote a unique quality culture where employees feel empowered",
-    "Reward and recognize performers to increase efficiency",
+    "Promote a unique quality culture where everyone feels empowered",
+    "Maintain long-term, mutually rewarding relationships with customers",
+    "Consistent and continuous improvement in all our operations",
 ];
 
 export default function AboutPage() {
     return (
         <>
             <HeroBanner
-                imageSrc={`${BASE}/images/banner_images/4.jpg`}
-                title="About Bharath Agrovet"
+                imageSrc="/images/operations/Farming.jpg"
+                title="About Happy Poultry"
                 subtitle="Our Story"
                 compact
             />
@@ -49,31 +45,32 @@ export default function AboutPage() {
                     <div className={styles.storyGrid}>
                         <AnimateOnScroll>
                             <div>
-                                <span className="overline">Established 2005</span>
+                                <span className="overline">Family Business</span>
                                 <h2 className="heading-2" style={{ marginBottom: "1.5rem" }}>
-                                    Three Decades of Excellence in Poultry
+                                    Twenty Years of Excellence in Poultry
                                 </h2>
                                 <div className="accent-bar" />
                                 <p className="text-large text-muted" style={{ marginTop: "1.5rem" }}>
-                                    &ldquo;BHARATH AGROVET INDUSTRIES&rdquo; is a leading poultry producing
-                                    company in Mangaluru managed by technical &amp; marketing
-                                    professionals with more than 3 decades of experience,
-                                    &ldquo;COMMITTED TO QUALITY &amp; SERVICE&rdquo;.
+                                    &ldquo;HAPPY POULTRY&rdquo; is a family-owned partnership concern —
+                                    a fast-growing poultry group based in Badiadka, Kasaragod
+                                    District, Kerala. We&apos;ve been in the chicken business for
+                                    over twenty years and enjoy a strong reputation as providers
+                                    of quality chicken with good scientific management practices.
                                 </p>
                                 <p className="text-muted" style={{ marginTop: "1rem" }}>
-                                    Bharath Agrovet Industries today has contributed significantly
-                                    to the overall growth of poultry industry in coastal districts
-                                    of Karnataka and Kerala.
+                                    With consistent and continuous improvement, Happy Poultry has
+                                    contributed significantly to the poultry industry and rural
+                                    economy in and around Kasaragod.
                                 </p>
                             </div>
                         </AnimateOnScroll>
                         <AnimateOnScroll delay={2}>
                             <div className={styles.storyImageStack}>
                                 <div className={styles.storyImageMain}>
-                                    <img src={`${BASE}/images/banner_images/2.jpg`} alt="Operations" />
+                                    <img src="/images/operations/Farming.jpg" alt="Happy Poultry Farms" />
                                 </div>
                                 <div className={styles.storyImageSecondary}>
-                                    <img src={`${BASE}/gallery_images/2089296197A2.jpg`} alt="Facilities" />
+                                    <img src="/images/products/Fresh Chilled Chicken.jpg" alt="Halal Chilled Chicken" />
                                 </div>
                             </div>
                         </AnimateOnScroll>
@@ -89,7 +86,7 @@ export default function AboutPage() {
                             <AnimateOnScroll>
                                 <h2 className={styles.statsHeading}>Our numbers speak for themselves.</h2>
                                 <p className={styles.statsSubtext}>
-                                    Three decades of integrated poultry operations across coastal Karnataka &amp; Kerala.
+                                    Two decades of integrated poultry operations across Kasaragod, Kerala.
                                 </p>
                             </AnimateOnScroll>
                         </div>
@@ -114,13 +111,13 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Timeline Journey — Unique to About Page */}
+            {/* Timeline Journey */}
             <section className="section section--cream">
                 <div className="container container--narrow">
                     <AnimateOnScroll>
                         <div style={{ textAlign: "center", marginBottom: "var(--space-xl)" }}>
                             <span className="overline" style={{ justifyContent: "center" }}>Our Journey</span>
-                            <h2 className="heading-2">The Bharath Agrovet Story</h2>
+                            <h2 className="heading-2">The Happy Poultry Story</h2>
                             <div className="accent-bar accent-bar--center" />
                         </div>
                     </AnimateOnScroll>
@@ -147,12 +144,13 @@ export default function AboutPage() {
                         <div className={styles.policySection}>
                             <span className="overline" style={{ justifyContent: "center" }}>Quality Policy</span>
                             <h2 className="heading-2" style={{ marginBottom: "0.75rem" }}>
-                                An Edge in Quality &amp; Services
+                                An Edge in Quality &amp; Service
                             </h2>
                             <div className="accent-bar accent-bar--center" />
                             <p className="text-large text-muted" style={{ marginTop: "1.5rem", maxWidth: "650px", marginInline: "auto" }}>
-                                In fulfilling our mission of having an edge in quality and services,
-                                we strive to exceed customers&apos; expectations and excel in continual inclusive growth.
+                                In fulfilling our mission, we strive to exceed customers&apos;
+                                expectations by consistently delivering nutritious, quality
+                                chicken at low cost, with continual inclusive growth.
                             </p>
                         </div>
                     </AnimateOnScroll>
@@ -182,24 +180,23 @@ export default function AboutPage() {
                     <div className={styles.vmGrid}>
                         <AnimateOnScroll>
                             <div className={styles.vmCard}>
-                                <span className={styles.vmLabel}>Vision</span>
+                                <span className={styles.vmLabel}>Mission</span>
                                 <p className={styles.vmText}>
-                                    We aspire to be the foremost poultry producer celebrated for our
-                                    commitment to delivering wholesome and affordable protein options
-                                    to society, while also generating employment opportunities and
-                                    contributing significantly to the nation&apos;s progress.
+                                    We are committed to producing &amp; marketing nutritious
+                                    chicken at low cost to customers who look for consistent
+                                    quality. We establish and maintain long-term, mutually
+                                    rewarding relationships with our customers.
                                 </p>
                             </div>
                         </AnimateOnScroll>
                         <AnimateOnScroll delay={2}>
                             <div className={styles.vmCard}>
-                                <span className={styles.vmLabel}>Mission</span>
+                                <span className={styles.vmLabel}>Values</span>
                                 <ul className={styles.missionList}>
-                                    <li>Minimal usage of natural resources and conserving the same</li>
-                                    <li>Continuously improve operations and enhance customer experience</li>
-                                    <li>Ensure equitable growth and welfare of all employees and stakeholders</li>
-                                    <li>Invest in innovation and advancement for the best output</li>
-                                    <li>Explore all opportunities for sustainable growth</li>
+                                    <li><strong>Integrity</strong> — Communicate openly, fulfill promises, treat all with fairness and respect</li>
+                                    <li><strong>Excellence</strong> — Consistently deliver innovative, quality work that exceeds expectations</li>
+                                    <li><strong>Commitment</strong> — Do what we say and deliver results you can depend on every time</li>
+                                    <li><strong>Relationships</strong> — Nurture our customers, farmers, suppliers, and employees at all times</li>
                                 </ul>
                             </div>
                         </AnimateOnScroll>
@@ -217,7 +214,7 @@ export default function AboutPage() {
                             See Our Operations in Action
                         </h2>
                         <p style={{ color: "rgba(255,255,255,0.7)", maxWidth: 550, margin: "0 auto 2rem", lineHeight: 1.8 }}>
-                            From breeding and hatching to feed production and retail — explore how we deliver quality at every step.
+                            From contract farming and processing to Halal retail — explore how we deliver quality at every step.
                         </p>
                         <a href="/activities" className="btn btn--gold">
                             Explore Activities →
