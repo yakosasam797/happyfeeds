@@ -62,46 +62,76 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background: transparent;
-    transition: all var(--duration-normal) var(--ease-out);
     padding: 1.25rem 0;
+    /* Use specific properties — NOT 'all' — to avoid implicit
+       transform/backdrop-filter states that create a containing block
+       and break position:fixed on the mobile nav panel */
+    transition: top var(--duration-normal) var(--ease-out),
+                padding var(--duration-normal) var(--ease-out);
 }
 
-.navbar:hover {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px) saturate(1.8);
-    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.05);
-    padding: 0.75rem 0;
+/* Background effect lives on a pseudo-element so the navbar itself
+   never carries backdrop-filter, which would create a containing
+   block and clip the mobile slide-out nav panel. */
+.navbar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    transition: background var(--duration-normal) var(--ease-out),
+                backdrop-filter var(--duration-normal) var(--ease-out),
+                box-shadow var(--duration-normal) var(--ease-out);
+    z-index: -1;
+    pointer-events: none;
 }
 
-.navbar:hover .logoText {
-    color: var(--color-dark);
-}
+/* Desktop-only hover — @media(hover:hover) prevents mobile browsers
+   from applying :hover on tap, which would re-trigger the bug */
+@media (hover: hover) {
+    .navbar:hover {
+        padding: 0.75rem 0;
+    }
 
-.navbar:hover .navLink {
-    color: var(--color-gray);
-}
+    .navbar:hover::before {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px) saturate(1.8);
+        box-shadow: 0 1px 30px rgba(0, 0, 0, 0.05);
+    }
 
-.navbar:hover .navLink:hover {
-    color: var(--color-dark);
-    background: var(--color-bg-alt);
-}
+    .navbar:hover .logoText {
+        color: var(--color-dark);
+    }
 
-.navbar:hover .burger span {
-    background: var(--color-dark);
+    .navbar:hover .navLink {
+        color: var(--color-gray);
+    }
+
+    .navbar:hover .navLink:hover {
+        color: var(--color-dark);
+        background: var(--color-bg-alt);
+    }
+
+    .navbar:hover .burger span {
+        background: var(--color-dark);
+    }
 }
 
 .navbar.scrolled {
     top: 0;
+    padding: 0.75rem 0;
+}
+
+.navbar.scrolled::before {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px) saturate(1.8);
     box-shadow: 0 1px 30px rgba(0, 0, 0, 0.05);
-    padding: 0.75rem 0;
 }
 
 .navbar.hidden {
     transform: translateY(-100%);
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s, padding 0.3s;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                top var(--duration-normal) var(--ease-out),
+                padding var(--duration-normal) var(--ease-out);
 }
 
 .inner {
