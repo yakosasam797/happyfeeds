@@ -65,8 +65,8 @@ export default function Footer() {
 
                 <div className={styles.bottomBar}>
                     <img
-                        src="https://happypoultry.co.in/images/logo.png"
-                        alt="Happy Poultry Logo"
+                        src="/images/logo.png"
+                        alt="Happy Feeds & Farms Logo"
                         className={styles.bottomLogo}
                     />
 

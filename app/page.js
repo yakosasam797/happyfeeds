@@ -1,50 +1,68 @@
 "use client";
 
 import AnimateOnScroll from "./components/AnimateOnScroll";
+import CountUp from "./components/CountUp";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { useState, useEffect, useCallback, useRef } from "react";
 
-const BASE = "https://happypoultry.co.in";
+
 
 /* ── Hero slides ── */
 const heroSlides = [
   {
-    img: `${BASE}/images/slider/1.jpg`,
+    img: "/images/slider/slider-1.jpg",
     title: "Poultry Performance\n& Productivity",
     sub: "Since 2000 — Badiadka, Kasaragod",
   },
   {
-    img: "/images/operations/Farming.jpg",
+    img: "/images/slider/slider-2.jpg",
     title: "We Farm Chickens\nEthically & Profitably",
     sub: "100+ Contract Farmers • Rural Employment",
   },
   {
-    img: "/images/products/Fresh Chilled Chicken.jpg",
+    img: "/images/from-me/about.png",
     title: "Premium Halal\nChilled Chicken",
     sub: "From Farm to Fork — With Care",
   },
 ];
 
-/* ── Activities ── */
 const activities = [
   {
-    title: "Farms",
-    desc: "We have tied up with more than 100 farmers to produce broilers on a contractual basis, creating employment and economic stability in rural areas.",
-    img: "/images/operations/Farming.jpg",
+    title: "Broiler Chicks",
+    desc: "The healthy chicks are marketed through our nearby region. To buy please contact marketing team.",
+    img: "/images/from-me/p1.png",
     num: "01",
   },
   {
-    title: "Chicken Processing Unit",
-    desc: "Conveyorised dressing unit at Badiadka processing 500 birds per hour — delivering fresh, hygienic Halal chilled chicken to our customers.",
-    img: "/images/operations/Processing.jpg",
+    title: "Poultry Feeds",
+    desc: "Rich nutritious and best quality ingredients are used in our poultry feeds, which helps our poultry farmers to get desired weight and better FCR.",
+    img: "/images/from-me/p2.png",
     num: "02",
   },
   {
-    title: "Retailing",
-    desc: "3 retail outlets in and around Kasaragod. Our Halal chilled chicken is well received by restaurants, institutions, and the general public.",
-    img: "/images/operations/Retailing.jpg",
+    title: "Poultry Supplements",
+    desc: "All kind of poultry supplements are available for optimum bird health and performance.",
+    img: "/images/from-me/p3.png",
     num: "03",
+  },
+  {
+    title: "Live Birds",
+    desc: "Our live birds are marketed through Kasaragod facility. To buy our healthy birds contact marketing team.",
+    img: "/images/from-me/p4.png",
+    num: "04",
+  },
+  {
+    title: "Processed / Dressed Chicken",
+    desc: "Fresh chilled and frozen chicken are marketed through our institutional supplies and retail outlet.",
+    img: "/images/from-me/p5.png",
+    num: "05",
+  },
+  {
+    title: "Broiler Chicks",
+    desc: "The healthy chicks are marketed through our near by region. To buy please contact marketing team.",
+    img: "/images/from-me/core.png",
+    num: "06",
   },
 ];
 
@@ -67,10 +85,10 @@ const products = [
 ];
 
 const gallery = [
-  "/images/products/Live Chicken.jpg",
-  "/images/products/Fresh Chilled Chicken.jpg",
-  "/images/operations/Farming.jpg",
-  "/images/operations/Processing.jpg",
+  "/images/from-me/about.png",
+  "/images/from-me/p1.png",
+  "/images/from-me/core.png",
+  "/images/from-me/p5.png",
 ];
 
 export default function HomePage() {
@@ -348,7 +366,7 @@ export default function HomePage() {
             {stats.map((s, i) => (
               <AnimateOnScroll key={s.label} delay={i + 1}>
                 <div className={styles.statCard}>
-                  <span className={styles.statNumber}>{s.number}</span>
+                  <CountUp value={s.number} className={styles.statNumber} />
                   <span className={styles.statLabel}>{s.label}</span>
                   <p className={styles.statDesc}>{s.desc}</p>
                 </div>
@@ -442,7 +460,7 @@ export default function HomePage() {
 
       {/* ===== CTA BANNER ===== */}
       <section className={styles.ctaBanner}>
-        <img src="/images/operations/Retailing.jpg" alt="Happy Poultry Retail" className={styles.ctaBg} />
+        <img src="/images/from-me/about.png" alt="Happy Poultry Farm" className={styles.ctaBg} />
         <div className={styles.ctaOverlay} />
         <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <AnimateOnScroll>

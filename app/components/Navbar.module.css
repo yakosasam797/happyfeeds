@@ -1,6 +1,64 @@
-.navbar {
+/* ── Top Utility Bar ── */
+.topBar {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background: #1a1a1a;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.topBarHidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.topBarInner {
+    max-width: var(--container-wide);
+    margin: 0 auto;
+    padding: 0.4rem var(--space-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topBarLeft,
+.topBarRight {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.topBarLink {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.65);
+    text-decoration: none;
+    padding: 0.15rem 0.5rem;
+    transition: color 0.2s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.topBarLink:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.topBarDivider {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 0.65rem;
+    user-select: none;
+}
+
+/* ── Main Navbar ── */
+.navbar {
+    position: fixed;
+    top: 32px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -34,6 +92,7 @@
 }
 
 .navbar.scrolled {
+    top: 0;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px) saturate(1.8);
     box-shadow: 0 1px 30px rgba(0, 0, 0, 0.05);
@@ -196,6 +255,14 @@
 
 /* Mobile */
 @media (max-width: 960px) {
+    .topBar {
+        display: none;
+    }
+
+    .navbar {
+        top: 0;
+    }
+
     .burger {
         display: flex;
     }

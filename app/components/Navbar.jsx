@@ -69,12 +69,38 @@ export default function Navbar() {
     ].filter(Boolean).join(" ");
 
     return (
-        <header className={navbarClass}>
+        <>
+            {/* ── Top Utility Bar ── */}
+            <div className={`${styles.topBar} ${scrolled ? styles.topBarHidden : ""}`}>
+                <div className={styles.topBarInner}>
+                    <div className={styles.topBarLeft}>
+                        <Link href="/about" className={styles.topBarLink}>Career</Link>
+                        <span className={styles.topBarDivider}>|</span>
+                        <Link href="/contact" className={styles.topBarLink}>Locate Us</Link>
+                        <span className={styles.topBarDivider}>|</span>
+                        <Link href="/products" className={styles.topBarLink}>Downloads</Link>
+                    </div>
+                    <div className={styles.topBarRight}>
+                        <span className={styles.topBarLink}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: "4px", verticalAlign: "-2px" }}><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            Login
+                        </span>
+                        <span className={styles.topBarDivider}>|</span>
+                        <span className={styles.topBarLink}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: "4px", verticalAlign: "-2px" }}><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            Global | English
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            {/* ── Main Navbar ── */}
+            <header className={navbarClass}>
             <div className={styles.inner}>
                 <Link href="/" className={styles.logo}>
                     <img
-                        src="https://happypoultry.co.in/images/logo.png"
-                        alt="Happy Poultry Logo"
+                        src="/images/logo02.png"
+                        alt="Happy Feeds & Farms Logo"
                         className={styles.logoImage}
                     />
                 </Link>
@@ -110,5 +136,6 @@ export default function Navbar() {
                 </button>
             </div>
         </header>
+        </>
     );
 }

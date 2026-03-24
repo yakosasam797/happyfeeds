@@ -15,7 +15,7 @@ const photos = [
     { src: "/images/operations/Feed Mills.jpg", caption: "Feed Mill", category: "Feed" },
     { src: "/images/operations/Processing.jpg", caption: "Processing Plant", category: "Processing" },
     { src: "/images/operations/Farming.jpg", caption: "Broiler Farming", category: "Farming" },
-    { src: "/images/operations/Retailing.jpg", caption: "Retail Outlet", category: "Retailing" },
+    { src: "/images/from-me/p2.png", caption: "Poultry Feeding", category: "Farming" },
     { src: "/images/products/Broiler Hatching Eggs.jpg", caption: "Hatching Eggs", category: "Products" },
     { src: "/images/products/Day Old Chicks.jpg", caption: "Day-Old Chicks", category: "Products" },
     { src: "/images/products/Hi-Density Poultry Feeds.jpg", caption: "Poultry Feeds", category: "Products" },

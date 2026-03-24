@@ -12,7 +12,7 @@ export default function ContactPage() {
                     <div className={styles.heroGrid}>
                         {/* Left — Image Card with text overlay */}
                         <div className={styles.imageCard}>
-                            <img src="/images/operations/Retailing.jpg" alt="Happy Poultry" />
+                            <img src="/images/from-me/about.png" alt="Happy Poultry" />
                             <div className={styles.imageCardOverlay}>
                                 <span className={styles.heroTag}>Contact Us</span>
                                 <h1 className={styles.heroTitle}>

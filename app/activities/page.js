@@ -25,7 +25,7 @@ const operations = [
         num: "03",
         title: "Retailing",
         desc: "We have established 3 retail outlets in and around Kasaragod. Our Halal chilled chicken has been well received by renowned restaurants, institutions, and the general public — which has encouraged us to reach more customers and expand our presence in the region.",
-        img: "/images/operations/Retailing.jpg",
+        img: "/images/from-me/p5.png",
     },
 ];
 

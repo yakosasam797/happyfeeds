@@ -126,7 +126,7 @@
 
 /* ===== Featured Banner ===== */
 .featuredBanner {
-    background: linear-gradient(135deg, var(--color-green) 0%, #1a4a35 100%);
+    background: linear-gradient(135deg, #8B0000 0%, #4A0000 100%);
     border-radius: var(--radius-xl);
     padding: clamp(2.5rem, 4vw, 4rem);
     display: grid;
@@ -165,7 +165,7 @@
 
 /* ===== Bottom CTA ===== */
 .ctaSection {
-    background: linear-gradient(135deg, #1b3c2d 0%, #0f2219 100%);
+    background: linear-gradient(135deg, #8B0000 0%, #4A0000 100%);
     padding: clamp(4rem, 6vw, 7rem) 0;
     position: relative;
     overflow: hidden;
